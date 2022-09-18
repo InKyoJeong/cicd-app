@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Get Release Tag
-        id: release-tag
+        id: release-version
         run: |
           echo "::set-output name=version"
       - name: Create Release
@@ -34,4 +34,4 @@ jobs:
       - name: Log Test
         run: |
           echo "${{ github.ref }}"
-          echo "${{ release-tag.outputs.version }}"
+          echo "${{ release-version.outputs.version }}"
