@@ -29,4 +29,7 @@ CI=true npm run test -- --coverage
 ```bash
 $ surge
 # domain: http://poor-question.surge.sh/
+
+# token: surge token
+# email: surge whoami
 ```
