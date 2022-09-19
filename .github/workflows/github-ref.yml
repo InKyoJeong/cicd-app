@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Log Test
         run: |
-          echo "${{ github.ref }}"
-          echo "${{ github.head_ref }}"
-          echo "${{ github.base_ref }}"
+          echo "github.ref: ${{ github.ref }}"
+          echo "github.head_ref: ${{ github.head_ref }}"
           echo "github.base_ref: ${{ github.base_ref }}"
+          echo "github.ref_name: ${{ github.ref_name }}"
       - name: if Test
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
