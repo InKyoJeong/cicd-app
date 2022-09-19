@@ -5,12 +5,14 @@ on:
     branches:
       - main
       - develop
-    paths: ["front/**"]
+    paths:
+      - "front/**"
   pull_request:
     branches:
       - main
       - develop
-    paths: ["front/**"]
+    paths:
+      - "front/**"
 
 jobs:
   build:
