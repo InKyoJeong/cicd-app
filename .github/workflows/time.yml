@@ -16,6 +16,7 @@ jobs:
       working-directory: ./front
     steps:
       - name: Set Timezone
+      - run: |
           echo timedatectl set-timezone 'Asia/Seoul'
           echo timedatectl set-timezone 'GMT'
           echo date
