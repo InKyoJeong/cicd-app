@@ -14,14 +14,14 @@ jobs:
       - name: Log Test
         run: |
           echo "${{ github.ref }}"
-          echo "${{ github.head_ref}}"
-          echo github.ref == 'refs/heads/main'
+          echo "${{ github.head_ref }}"
+          echo "WF_ENV: ${{ github.head_ref }}"
       - name: if Test
-        if: ${{ github.ref }} == 'refs/heads/main'
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           echo "this is main"
       - name: if Test2
-        if: ${{ github.ref }} == 'refs/heads/develop'
+        if: ${{ github.ref == 'refs/heads/develop' }}
         run: |
           echo "this is develop"
   log-default-env:
