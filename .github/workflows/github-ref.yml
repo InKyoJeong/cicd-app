@@ -17,14 +17,14 @@ jobs:
           echo "github.head_ref: ${{ github.head_ref }}"
           echo "github.base_ref: ${{ github.base_ref }}"
           echo "github.ref_name: ${{ github.ref_name }}"
-      - name: if Test
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: is main
+        if: ${{ github.base_ref == 'main' }}
         run: |
-          echo "this is main"
-      - name: if Test2
-        if: ${{ github.ref == 'refs/heads/develop' }}
+          echo "github.base_ref == main"
+      - name: is develop
+        if: ${{ github.base_ref == 'develop' }}
         run: |
-          echo "this is develop"
+          echo "github.base_ref == develop"
   log-default-env:
     runs-on: ubuntu-latest
     steps:
