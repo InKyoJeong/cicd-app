@@ -1,0 +1,21 @@
+name: 타임존 체크
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - "front/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./front
+    steps:
+      - name: Set Timezone
+          echo timedatectl set-timezone 'Asia/Seoul'
+          echo timedatectl set-timezone 'GMT'
+          echo date
