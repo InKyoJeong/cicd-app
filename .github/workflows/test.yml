@@ -1,4 +1,4 @@
-name: 티타임 프론트엔드 CI
+name: 티타임 프론트엔드 CI test
 
 on:
   push:
