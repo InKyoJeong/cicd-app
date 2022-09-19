@@ -34,4 +34,4 @@ jobs:
       - name: Log Test
         run: |
           echo "${{ github.ref }}"
-          echo "${{ steps.release-version.outputs.version }}"
+          echo "${{ release-version.outputs.version }}"
