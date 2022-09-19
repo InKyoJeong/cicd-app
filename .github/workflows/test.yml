@@ -1,10 +1,10 @@
 name: 티타임 프론트엔드 CI test
 
 on:
+  push:
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
   build:
