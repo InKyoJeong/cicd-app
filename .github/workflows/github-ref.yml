@@ -15,7 +15,8 @@ jobs:
         run: |
           echo "${{ github.ref }}"
           echo "${{ github.head_ref }}"
-          echo "WF_ENV: ${{ github.head_ref }}"
+          echo "${{ github.base_ref }}"
+          echo "github.base_ref: ${{ github.base_ref }}"
       - name: if Test
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
