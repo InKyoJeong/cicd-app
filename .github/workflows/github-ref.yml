@@ -1,0 +1,26 @@
+name: github ref
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Test
+        run: |
+          echo "${{ github.ref }}"
+          echo "${{ github.head_ref}}"
+          echo github.ref == 'refs/heads/main'
+      - name: if Test
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "this is main"
+      - name: if Test2
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          echo "this is develop"
