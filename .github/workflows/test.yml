@@ -2,17 +2,11 @@ name: 티타임 프론트엔드 CI test
 
 on:
   push:
-    branches:
-      - main
-      - develop
-    paths:
-      - "front/**"
+    branches: [main, develop]
+    paths: ["front/**"]
   pull_request:
-    branches:
-      - main
-      - develop
-    paths:
-      - "front/**"
+    branches: [main, develop]
+    paths: ["front/**"]
 
 jobs:
   build:
