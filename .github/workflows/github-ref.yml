@@ -15,11 +15,15 @@ jobs:
         run: |
           echo "${{ github.ref }}"
           echo "${{ github.head_ref}}"
-      - uses: mdecoleman/pr-branch-name@1.2.0
-        id: vars
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo ${{ steps.vars.outputs.branch }}
+          echo github.ref == 'refs/heads/main'
+      - name: if Test
+        if: ${{ github.ref }} == 'refs/heads/main'
+        run: |
+          echo "this is main"
+      - name: if Test2
+        if: ${{ github.ref }} == 'refs/heads/develop'
+        run: |
+          echo "this is develop"
   log-default-env:
     runs-on: ubuntu-latest
     steps:
