@@ -25,7 +25,7 @@ jobs:
         if: ${{ github.base_ref == 'develop' }}
         run: |
           echo "github.base_ref == develop"
-
+          
       - name: Create .env file
         shell: bash
         env:
@@ -37,3 +37,4 @@ jobs:
       - if: ${{ github.base_ref == 'main' }}
         run: |
           echo "PROD_URL: ${PROD_URL}"
+
