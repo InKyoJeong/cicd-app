@@ -15,6 +15,11 @@ jobs:
         run: |
           echo "${{ github.ref }}"
           echo "${{ github.head_ref}}"
+      - uses: mdecoleman/pr-branch-name@1.2.0
+        id: vars
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo ${{ steps.vars.outputs.branch }}
   log-default-env:
     runs-on: ubuntu-latest
     steps:
