@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - develop
+env:
+  BACK_URL: TEATIME
+  PROD_URL: PROD_TEATIME
 
 jobs:
   build:
@@ -25,16 +28,12 @@ jobs:
         if: ${{ github.base_ref == 'develop' }}
         run: |
           echo "github.base_ref == develop"
-          
+
       - name: Create .env file
         shell: bash
-        env:
-          BACK_URL: TEATIME
-          PROD_URL: PROD_TEATIME
         if: ${{ github.base_ref == 'develop' }}
         run: |
           echo "BACK_URL: ${BACK_URL}"
       - if: ${{ github.base_ref == 'main' }}
         run: |
           echo "PROD_URL: ${PROD_URL}"
-
