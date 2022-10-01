@@ -3,13 +3,13 @@ tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
     labels:
-      - '*.기능'
+      - '/기능/g'
   - title: '🐛 Bug Fixes'
     labels:
-      - '*.수정'
+      - '/수정/g'
   - title: '🪃 Trouble Shooting'
     labels: 
-      - '*.트러블슈팅'
+      - '/트러블슈팅/g'
 change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&'  
 version-resolver:
