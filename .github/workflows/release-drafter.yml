@@ -1,8 +1,6 @@
 name: Release Drafter
 
-on:
-  pull_request:
-    branches: [main]
+on: 
   push:
     branches: [main]
 
