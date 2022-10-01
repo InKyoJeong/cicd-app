@@ -29,4 +29,6 @@ version-resolver:
 template: | 
     $CHANGES
 
+    <br>
+
     $CONTRIBUTORS
