@@ -4,15 +4,15 @@ categories:
   - title: '🚀 Features'
     labels: 
       - '🌟기능'
-      - '기능'
+      - ':star2:기능'
   - title: '🐛 Bug Fixes'
     labels:
       - '🐞수정'
-      - '수정'
+      - ':lady_beetle:수정'
   - title: '🪃 Trouble Shooting'
     labels: 
       - '🪃트러블슈팅'
-      - '트러블슈팅'
+      - ':boomerang:트러블슈팅'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'  
 version-resolver:
