@@ -2,11 +2,17 @@ name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
-    label: '🌟기능'
+    labels: 
+      - '🌟기능'
+      - '기능'
   - title: '🐛 Bug Fixes'
-    label: '🐞수정'
+    labels:
+      - '🐞수정'
+      - '수정'
   - title: '🪃 Trouble Shooting'
-    label: '🪃트러블슈팅'
+    labels: 
+      - '🪃트러블슈팅'
+      - '트러블슈팅'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'  
 version-resolver:
@@ -22,7 +28,6 @@ version-resolver:
   default: patch
 template: |
     $CONTRIBUTORS
+    ## Changes
 
-#   ## Changes
-
-#   $CHANGES
+    $CHANGES
