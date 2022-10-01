@@ -1,5 +1,4 @@
-import React from "react";
-import logo from "./logo.svg";
+ 
 import "./App.css";
 
 function App() {
@@ -8,6 +7,7 @@ function App() {
        <h1>
         Hello
        </h1>
+       <p>hihi</p>
     </div>
   );
 }
