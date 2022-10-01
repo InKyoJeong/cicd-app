@@ -2,12 +2,12 @@ name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
-    label: '^.*(기능)'
+    label: '🌟기능'
   - title: '🐛 Bug Fixes'
-    label: '^.*(수정)'
+    label: '🐞수정'
   - title: '🪃 Trouble Shooting'
-    label: '^.*(트러블슈팅)'
-change-template: '- $TITLE (#$NUMBER)'
+    label: '🪃트러블슈팅'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'  
 version-resolver:
   major:
