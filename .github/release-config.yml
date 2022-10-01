@@ -13,7 +13,7 @@ categories:
     labels: 
       - '🪃트러블슈팅'
       - ':boomerang:트러블슈팅'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&'  
 version-resolver:
   major:
